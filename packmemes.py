@@ -10,7 +10,7 @@ exts = ['png', 'jpg', 'jpeg', 'gif']
 for ext in exts:
     for filename in glob.iglob(os.getcwd() + "**/**/*." + ext, recursive=True):
         meme_html = open(filename + ".html", "w")
-        meme_html.write(template_text.replace("MEME_SRC", filename[len(os.getcwd()):]))
+        meme_html.write(template_text.replace("MEME_SRC", filename[len(os.getcwd()) + 1:]))
         meme_html.close()
 
 template.close()
